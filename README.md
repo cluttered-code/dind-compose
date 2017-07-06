@@ -1,2 +1,2 @@
-# docker-compose
-Docker Compose
+# dind-compose
+docker in docker with docker-compose
