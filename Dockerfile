@@ -1,4 +1,4 @@
-FROM docker:dind
+FROM docker:1.12-dind
 
 LABEL maintainer "David Clutter <cluttered.code@gmail.com>"
 
