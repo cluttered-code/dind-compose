@@ -4,4 +4,7 @@ LABEL maintainer "David Clutter <cluttered.code@gmail.com>"
 
 RUN apk update &&\
     apk upgrade --no-cache &&\
-    apk add --no-cache docker-compose
+    apk add --no-cache python3 py3-requests py3-distro libffi openssl &&\
+    apk add --no-cache --virtual .build-deps python3-dev py3-pip py3-wheel py3-setuptools libffi-dev openssl-dev gcc libc-dev make &&\
+    pip3 install --no-cache-dir docker-compose &&\
+    apk del .build-deps
